@@ -9,6 +9,7 @@ app.use(bodyParse.urlencoded({ extended: true }));
 app.use(bodyParse.json());
 
 app.get('/api/preguntas', (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*');
     res.status(200).json(PREGUNTAS);
 });
 
